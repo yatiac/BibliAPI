@@ -219,4 +219,5 @@
    http://localhost:3000/versiculos/jn/3/16
    
 # TODO
-- [ ] Documentar el API (responsable: Alexis y GaboV)
+- [x] Documentar el API (responsable: Alexis y GaboV)
+- [ ] Documentar los pasos para levantar el API en local
