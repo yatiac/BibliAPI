@@ -19,12 +19,12 @@
   ```json
   [
     { 
-      id: 1, 
-      nombre: "Génesis", 
-      abreviatura: "Gn", 
-      totalCapítulos: 50 
+      "id": 1, 
+      "nombre": "Génesis", 
+      "abreviatura": "Gn", 
+      "totalCapítulos": 50 
     }
-    ...   
+    "..."   
   ]
   ```
 
@@ -51,10 +51,10 @@
   **Contenido:** 
   ```json
   { 
-    id: 55, 
-    nombre: "Juan", 
-    abreviatura: "Jn", 
-    totalCapítulos: 21 
+    "id": 55, 
+    "nombre": "Juan", 
+    "abreviatura": "Jn", 
+    "totalCapítulos": 21 
   }
   ```
 
@@ -63,7 +63,7 @@
   
   **Contenido:** 
   ```json
-  { message: "No se encontró lo que buscabas" }
+  { "message": "No se encontró lo que buscabas" }
   ```
   
 
@@ -180,7 +180,7 @@ http://localhost:3000/libros/Jn
   
   **Contenido:** 
   ```json
-  { message: "No se encontró lo que buscabas" }
+  { "message": "No se encontró lo que buscabas" }
   ```
 
 ## **Ejemplo:**
@@ -202,7 +202,7 @@ http://localhost:3000/libros/Jn
   `capitulo=[integer]`  
   `versiculo=[integer]`
 
-##**Respuesta de éxito**
+## **Respuesta de éxito**
 
   **Código:** 200
 
@@ -220,12 +220,12 @@ http://localhost:3000/libros/Jn
   
   **Contenido:** 
   ```json
-  { message: "No se encontró lo que buscabas" }
+  { "message": "No se encontró lo que buscabas" }
   ```
 
-* **Ejemplo:**
+## **Ejemplo:**
 
-   http://bibliapi--yatiac.repl.co/versiculos/jn/3/16
+   http://localhost:3000/versiculos/jn/3/16
    
 # TODO
 - [ ] Documentar el API (responsable: Alexis y GaboV)
