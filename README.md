@@ -175,7 +175,7 @@
 
 * **Ejemplo:**
 
-   http://bibliapi--yatiac.repl.co/versiculos/Abd
+   http://localhost:3000/versiculos/Abd
 
 
 
