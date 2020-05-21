@@ -216,7 +216,7 @@
 
 * **Ejemplo:**
 
-   http://bibliapi--yatiac.repl.co/versiculos/jn/3/16
+   http://localhost:3000/versiculos/jn/3/16
    
 # TODO
 - [ ] Documentar el API (responsable: Alexis y GaboV)
