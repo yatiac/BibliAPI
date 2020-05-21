@@ -115,7 +115,7 @@ app.get("/versiculos/:abreviatura/:capitulo/:versiculo", async (req, res) => {
 `;
   try {
     db = await Database.open(DATABASE_NAME);
-    response = await db.all(sql, {
+    response = await db.get(sql, {
       $abreviatura: abreviatura,
       $capitulo: capitulo,
       $versiculo: versiculo,
