@@ -1,6 +1,7 @@
 # 📕API Para la Biblia Católica 
 > Desarrollado por `Yatiac` con ayuda de `Alexis` y `GaboV`
 
+
 # **Libros de la Biblia**
 
   Retorna un arreglo de objetos donde cada objeto es un libro de la Biblia. Cada libro contiene: id,nombre, abreviatura y cantidad de capítulos.
@@ -228,5 +229,5 @@ http://localhost:3000/libros/Jn
    http://localhost:3000/versiculos/jn/3/16
    
 # TODO
-- [ ] Documentar el API (responsable: Alexis y GaboV)
+- [x] Documentar el API (responsable: Alexis y GaboV)
 - [ ] Documentar los pasos para levantar el API en local
