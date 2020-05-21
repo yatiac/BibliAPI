@@ -28,7 +28,7 @@
 
 * **Ejemplo:**
 
-   http://bibliapi--yatiac.repl.co/libros
+   http://localhost:3000/libros
 
 
 **Libro de la Biblia**
