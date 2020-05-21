@@ -60,7 +60,7 @@
 
 * **Ejemplo:**
 
-   http://bibliapi--yatiac.repl.co/libros/Jn
+   http://localhost:3000/libros/Jn
 
 **Versículos de un libro de la Biblia**
 ----
