@@ -228,6 +228,20 @@ http://localhost:3000/libros/Jn
 
    http://localhost:3000/versiculos/jn/3/16
    
+# Instalación
+
+## **Clonar el repositorio**
+    `$ git clone https://github.com/yatiac/BibliAPI.git`
+
+## **Navegar a la carpeta**
+    `$ cd BibliAPI`
+
+## **Instalar dependecias
+    `npm install``
+
+## **Levantar el API
+    `node index.js`
+
 # TODO
 - [x] Documentar el API (responsable: Alexis y GaboV)
 - [ ] Documentar los pasos para levantar el API en local
