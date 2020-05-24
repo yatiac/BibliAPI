@@ -227,7 +227,7 @@ http://localhost:3000/libros/Jn
 ## **Ejemplo:**
 
    http://localhost:3000/versiculos/jn/3/16
-   
+  
 # Instalación
 
 ## **Clonar el repositorio**
@@ -237,11 +237,12 @@ http://localhost:3000/libros/Jn
     `$ cd BibliAPI`
 
 ## **Instalar dependecias
-    `npm install``
+    `npm install`
 
 ## **Levantar el API
     `node index.js`
 
+
 # TODO
 - [x] Documentar el API (responsable: Alexis y GaboV)
-- [ ] Documentar los pasos para levantar el API en local
+- [x] Documentar los pasos para levantar el API en local
