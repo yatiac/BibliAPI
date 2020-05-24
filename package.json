@@ -12,6 +12,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "sqlite-async": "^1.0.12",
-    "sqlite3": "^4.2.0"
+    "sqlite3": "^4.2.0",
+    "swagger-jsdoc": "^4.0.0",
+    "swagger-ui-express": "^4.1.4"
   }
 }

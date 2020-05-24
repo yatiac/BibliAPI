@@ -44,4 +44,22 @@ router.get("/:abreviatura/:capitulo/:versiculo", async (req, res) => {
   res.send(response);
 });
 
+router.get("/:abreviatura/:capitulo", async (req, res) => { 
+  const abreviatura = req.params.abreviatura.toUpperCase();
+  const capitulo = req.params.capitulo | 0;
+  response=[];
+  try { 
+    db = await Database.open(constants.DATABASE_NAME); 
+    response = await db.all(queries.GET_CAPITULO_BY_ABREVIATURA, {
+      $abreviatura: abreviatura,
+      $capitulo: capitulo
+    });
+    db.close();
+    response = response.length > 0 ? response : constants.NOT_FOUND;
+  } catch (error) { 
+    console.log(error);
+  }
+  res.send(response);
+});
+
 module.exports = router;

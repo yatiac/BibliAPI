@@ -17,8 +17,7 @@ module.exports = {
       livros
     WHERE
       upper(abreviacao) = $abreviatura
-    LIMIT 1
-  `,
+    LIMIT 1`,
   GET_VERSICULO_BY_ABREVIATURA: `
     SELECT 
       a.numero_capitulo as capitulo, 
@@ -35,8 +34,7 @@ module.exports = {
     WHERE
       a.is_title = 0
     ORDER BY 
-      capitulo, versiculo
-  `,
+      capitulo, versiculo  `,
   GET_VERSICULO_BY_ABREVIATURA_CAPITULO_VERSICULO: `
     SELECT 	
       a.numero_versiculo as numero,
@@ -53,6 +51,23 @@ module.exports = {
       a.numero_capitulo = $capitulo
     AND
       a.numero_versiculo = $versiculo
-    LIMIT 1
-  `
+    LIMIT 1  `,
+  GET_CAPITULO_BY_ABREVIATURA: `
+    SELECT
+      a.numero_versiculo as versiculo,
+      a.texto as texto
+    FROM
+      versiculos_fts a
+    INNER JOIN
+      livros b
+    ON
+      a.id_livro = b.id
+    AND
+      upper(b.abreviacao) = $abreviatura
+    AND
+      a.numero_capitulo = $capitulo
+    WHERE
+      a.is_title = 0
+    ORDER BY
+      numero_capitulo, versiculo  `
 }
