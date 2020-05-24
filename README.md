@@ -227,7 +227,18 @@ http://localhost:3000/libros/Jn
 ## **Ejemplo:**
 
    http://localhost:3000/versiculos/jn/3/16
-   
+
+
+
+
+**Instalar API en Localhost**
+---
+* **Instalar NODE JS:** [NodeJS](https://nodejs.org/es/download/)
+
+* **Instalar Express:** `$ npm install express`
+
+* **Levantar servidor** `$ node index.js`
+
 # TODO
 - [x] Documentar el API (responsable: Alexis y GaboV)
 - [ ] Documentar los pasos para levantar el API en local
