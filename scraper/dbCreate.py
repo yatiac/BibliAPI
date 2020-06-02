@@ -1,8 +1,7 @@
 '''
     script args
-        1:sqlite file 
-        2:create table queries
-        3:action {create,insert}
+        1:database
+        2:queries.sql file
 '''
 import sys
 import sqlite3
@@ -10,7 +9,6 @@ from sqlite3 import Error
 
 db_file = sys.argv[1]
 query_file = sys.argv[2]
-action = sys.argv[3]
 
 
 def create_connection(path):
@@ -27,13 +25,6 @@ def create_table(conn, query):
     except Error as e:
         print('Unable to crate table...')
 
-def insert(conn,query):
-    try:
-        cursor = conn.cursor()
-        cursor.execute(query)
-        conn.commit()
-    except Error as e:
-        print('Unable to insert...') 
 
 def get_queries(path):
     with open(path, 'r') as f:
@@ -43,15 +34,17 @@ def get_queries(path):
 table_queries = get_queries(query_file)
 conn = create_connection(db_file)
 if conn:
-    if action.lower()=='create':
-        for query in table_queries:    
-            create_table(conn,query)
-    elif action.lower()=='insert':
-        for query in table_queries:
-            insert(conn, query)
-    else:
-        print('Imvalid action...')
+    for query in table_queries:    
+        create_table(conn,query)
 else:
     print('Connection failed')
 
 
+
+# def insert(conn,query):
+#     try:
+#         cursor = conn.cursor()
+#         cursor.execute(query)
+#         conn.commit()
+#     except Error as e:
+#         print('Unable to insert...') 
