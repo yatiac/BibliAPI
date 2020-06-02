@@ -103,7 +103,6 @@ def insertions(json_file,cursor):
                 query_verse = GetVerseQuery(versenum, verse, id_chapter)
                 executeInsert(query_verse, cursor)
 
-        break
     pass
 
 

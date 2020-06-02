@@ -17,7 +17,7 @@ def log(msg):
 def getSoup(url):
     r = requests.get(url)
     if (r.status_code == 200):
-        return BeautifulSoup(r.text, 'lxml')
+        return BeautifulSoup(r.text, 'html5lib')
     else:
         print('Error en el request....')
         return None
