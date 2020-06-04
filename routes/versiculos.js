@@ -4,6 +4,36 @@ const Database = require("sqlite-async");
 const constants = require("../constants.js");
 const queries = require("../queries.js");
 
+/**
+ * @swagger
+ * definitions:
+ *  versiculo:
+ *    type: object
+ *    properties:
+ *       numero:
+ *         type: integer
+ *         example: 3
+ *       texto:
+ *         type: string
+ *         example: '»Pues Dios amó tanto al mundo, que dio a su Hijo único, para que todo aquel que cree en él no muera, sino que tenga vida eterna.'
+ */
+
+/**
+ * @swagger
+ * /versiculos/{abreviatura}:
+ *    get:
+ *      description: 'Retorna un diccionario de arreglos de objetos donde cada arreglo es un capítulo del libro de la Biblia solicitado. Cada objeto del arreglo es un versículo de este capítulo. Cada versículo contiene\: número y texto.'
+ *      parameters:
+ *        - name: abreviatura
+ *          in: path
+ *          required: true
+ *          description: Abreviatura del libro a buscar (ej Gn, Ex, Sal, etc..)
+ *          type: string
+ *      responses:
+ *        200:
+ *          schema:
+ *            $ref: '#/definitions/versiculo'
+ */
 router.get("/:abreviatura", async (req, res) => {
   const abreviatura = req.params.abreviatura.toUpperCase();  
   try {
@@ -24,6 +54,32 @@ router.get("/:abreviatura", async (req, res) => {
   res.send(response);
 });
 
+/**
+ * @swagger
+ * /versiculos/{abreviatura}/{capitulo}/{versiculo}:
+ *    get:
+ *      description: 'Retorna un objeto que es un versículo de la Biblia. Contiene\: numero y texto'
+ *      parameters:
+ *        - name: abreviatura
+ *          in: path
+ *          required: true
+ *          description: Abreviatura del libro a buscar (ej Gn, Ex, Sal, etc..)
+ *          type: string
+ *        - name: capitulo
+ *          in: path
+ *          required: true
+ *          description: Capíulo del libro a buscar (ej 3, 4, 10, etc..)
+ *          type: integer
+ *        - name: versiculo
+ *          in: path
+ *          required: true
+ *          description: Versiculo del libro a buscar (ej 16, 13, 12, etc..)
+ *          type: integer
+ *      responses:
+ *        200:
+ *          schema:
+ *            $ref: '#/definitions/versiculo'
+ */
 router.get("/:abreviatura/:capitulo/:versiculo", async (req, res) => {
   const abreviatura = req.params.abreviatura.toUpperCase();
   const capitulo = req.params.capitulo | 0;
